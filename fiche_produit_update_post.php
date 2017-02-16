@@ -3,6 +3,30 @@ session_start();
 
 require 'connect.php';
 
+if ($_FILES['picture']['size']==0){
+
+$req = $bdd->prepare('UPDATE mycave SET name= ?, year=?, grapes=?, country=?, region=?, description=? WHERE id=?');
+
+$req->execute(array(
+	$_POST['name'],
+	$_POST['year'],
+	$_POST['grapes'],
+	$_POST['country'],
+	$_POST['region'],
+	$_POST['description'],
+	$_GET['id_produit']
+	));
+
+	$donnees = $req->fetch();
+
+	$pdt = $_GET['id_produit'];
+	$msg = 'Référence modifiée!';
+
+	header('Location:fiche_produit_admin.php?id_produit='.$pdt.'&msg='.$msg);
+
+}else{
+
+
 $_FILES['picture']['name'];     //Le nom original du fichier, comme sur le disque du visiteur (exemple : mon_picture.png).
 $_FILES['picture']['type'];     //Le type du fichier. Par exemple, cela peut être « image/png ».
 $_FILES['picture']['size'];     //La taille du fichier en octets.
@@ -44,4 +68,9 @@ $req->execute(array(
 
 	header('Location:fiche_produit_admin.php?id_produit='.$pdt.'&msg='.$msg);
 
+
+	
+
+
+}
 ?>

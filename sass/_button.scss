@@ -1,0 +1,8 @@
+@mixin button ($text, $background){
+	background: $background;
+	border-radius: 10px;
+	color: $text;
+	padding: 0 15px;
+	text-decoration: none;
+	text-transform: uppercase;
+}

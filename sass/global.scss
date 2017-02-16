@@ -1,6 +1,9 @@
+@import 'reset';
 @import 'color';
 @import 'font';
+@import 'button';
 
 body{
-	background-color: $bordeaux;
+	font-family: $font;
+	font-size: $font-size;
 }
