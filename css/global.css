@@ -38,3 +38,116 @@ table {
 body {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1em; }
+
+nav {
+  height: 60px;
+  background-color: #88002D;
+  color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+nav img {
+  padding: 5px 20px; }
+
+nav button {
+  background: white;
+  border-radius: 10px;
+  color: #88002D;
+  padding: 10px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-color: #885C7E;
+  margin: 10px 15px; }
+
+nav button:hover, nav button:active {
+  background: #3E0018;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-color: #88002D; }
+
+.modal .modal-dialog {
+  position: fixed;
+  z-index: 10;
+  color: #88002D; }
+
+.modal .modal-dialog .modal-body input, .modal .modal-dialog .modal-body input:active {
+  border-radius: 5px; }
+
+.modal .modal-dialog .modal-body input:focus, .modal .modal-dialog .modal-body input:active {
+  border-color: #88002D; }
+
+.modal .modal-dialog .modal-body .submit {
+  background: #88002D;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-color: #885C7E; }
+
+.modal .modal-dialog .modal-body .submit:hover, .modal .modal-dialog .modal-body .submit:active {
+  background: white;
+  border-radius: 5px;
+  color: #3E0018;
+  padding: 5px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-color: #88002D; }
+
+.main {
+  margin-top: 60px; }
+
+.row {
+  padding: 20px 0;
+  border: 2px solid #88002D;
+  margin-top: -2px;
+  display: flex; }
+
+.row .thumbnail {
+  border: none; }
+
+.row .div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.row .div .text {
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+
+.row .div button {
+  background: #88002D;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-color: #885C7E;
+  margin-left: 5px;
+  padding: 10px; }
+
+.row .div button:hover, .row .div button:active {
+  background: #3E0018;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-color: #88002D;
+  margin-left: 5px;
+  padding: 10px; }
+
+@media screen and (max-width: 768px) {
+  .main > .container-fluid > .row > .suite {
+    height: auto;
+    padding: 10px 20px; } }

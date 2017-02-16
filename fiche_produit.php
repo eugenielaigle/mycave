@@ -8,10 +8,12 @@ $req = $bdd->prepare('SELECT id, name, year, grapes, country, region, descriptio
 ?>
 
 <nav>
+	<img src="img/logo.png" alt="logo">
 	<button data-toggle="modal" data-target="#myModal">
  	 Se connecter
 	</button>
-	<!-- Modal -->
+</nav>
+<!-- Modal -->
 		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
@@ -33,8 +35,8 @@ $req = $bdd->prepare('SELECT id, name, year, grapes, country, region, descriptio
 				</div><!-- /.modal-content -->
 			</div><!-- /.modal-dialog -->
 		</div><!-- /.modal -->
-</nav>
 
+<main class="main">
 <div class="fiche">
 	<div class="image" style="background-image: url('img/<?php echo $donnees['picture']; ?>'); width: 400px; height: 500px; background-size: cover;"></div>
 	<h2><?php echo $donnees['name']; ?></h2>
@@ -44,3 +46,4 @@ $req = $bdd->prepare('SELECT id, name, year, grapes, country, region, descriptio
 	<p>Description: <?php echo $donnees['description'] ?></p>
 	<a href="index.php"><button>Retour</button></a>
 </div>
+</main>

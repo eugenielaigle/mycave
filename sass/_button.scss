@@ -1,8 +1,19 @@
-@mixin button ($text, $background){
+@mixin button ($text, $background, $border){
 	background: $background;
 	border-radius: 10px;
 	color: $text;
-	padding: 0 15px;
+	padding: 10px 25px;
 	text-decoration: none;
 	text-transform: uppercase;
+	border-color: $border;
+}
+
+@mixin submit ($text, $background, $border){
+	background: $background;
+	border-radius: 5px;
+	color: $text;
+	padding: 5px 15px;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-color: $border;
 }

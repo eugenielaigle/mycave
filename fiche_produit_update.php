@@ -9,6 +9,14 @@ $donnees = $req->fetch();
 
 ?>
 
+<nav>
+	<img src="img/logo.png" alt="logo">
+	<p>Bonjour <?php echo $_SESSION['pseudo']; ?></p>
+	<a href="index.php"><button>Se Déconnecter</button></a>
+</nav>
+
+<main class="main">
+
 <div class="fiche">
 	<h2>Modifier une référence</h2>
 	
@@ -32,3 +40,4 @@ $donnees = $req->fetch();
 	
 
 </div>
+</main>

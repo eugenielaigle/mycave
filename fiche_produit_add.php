@@ -3,6 +3,14 @@ session_start();
 
 include 'header.php'; ?>
 
+<nav>
+	<img src="img/logo.png" alt="logo">
+	<p>Bonjour <?php echo $_SESSION['pseudo']; ?></p>
+	<a href="index.php"><button>Se Déconnecter</button></a>
+</nav>
+
+
+<main class="main">
 <div class="fiche">
 	<h2>Ajouter une référence</h2>
 	
@@ -25,3 +33,4 @@ include 'header.php'; ?>
 
 		<a href="admin_index.php"><button>Retour</button></a>
 </div>
+</main>

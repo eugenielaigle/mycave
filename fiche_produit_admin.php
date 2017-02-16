@@ -8,6 +8,7 @@ $req = $bdd->prepare('SELECT id, name, year, grapes, country, region, descriptio
 
 ?>
 <nav>
+	<img src="img/logo.png" alt="logo">
 	<a href="fiche_produit.php?id_produit=<?php echo $donnees['id']; ?>"><button>Se Déconnecter</button></a>
 </nav>
 
@@ -18,6 +19,7 @@ $req = $bdd->prepare('SELECT id, name, year, grapes, country, region, descriptio
 	echo $_GET['msg'];
 	} ?>
 	
+	<main class="main">
 	<div class="image" style="background-image: url('img/<?php echo $donnees['picture']; ?>'); width: 400px; height: 500px; background-size: cover;"></div>
 	<h2><?php echo $donnees['name']; ?></h2>
 	<h3>Année:<?php echo $donnees['year']; ?></h3>
@@ -32,4 +34,4 @@ $req = $bdd->prepare('SELECT id, name, year, grapes, country, region, descriptio
 
 
 </div>
-
+</main>

@@ -1,4 +1,5 @@
 <?php 
+
 session_start();
 
 require 'connect.php';
@@ -67,10 +68,6 @@ $req->execute(array(
 	$msg = 'Référence modifiée!';
 
 	header('Location:fiche_produit_admin.php?id_produit='.$pdt.'&msg='.$msg);
-
-
-	
-
 
 }
 ?>

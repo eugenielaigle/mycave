@@ -7,3 +7,106 @@ body{
 	font-family: $font;
 	font-size: $font-size;
 }
+
+
+nav{
+	height: 60px;
+	background-color: $bordeaux;
+	color: $white;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+	img{
+		padding: 5px 20px;
+	}
+
+	button{
+		@include button ($bordeaux, $white, $light-purple);
+		margin: 10px 15px;
+	}
+
+	button:hover, button:active{
+	 	@include button ($white, $dark-purple, $bordeaux);
+	}
+
+}
+
+.modal{
+	
+	.modal-dialog{
+		position: fixed;
+		z-index: 10;
+		color: $bordeaux;
+	
+		.modal-body{
+		
+			input, input:active{
+				border-radius: 5px;
+			}
+
+			input:focus, input:active{
+				border-color: $bordeaux;
+			}
+
+			.submit{
+				@include submit ($white, $bordeaux, $light-purple);
+			}
+
+			.submit:hover, .submit:active{
+			 	@include submit ($dark-purple, $white, $bordeaux);
+			}
+		}
+	}
+}
+
+.main{
+	margin-top: 60px;
+}
+
+.row{
+	padding: 20px 0;
+	border: 2px solid $bordeaux;
+	margin-top: -2px;
+	display: flex;
+
+	.thumbnail{
+		border: none;
+	}
+
+	.div{
+		display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    flex-wrap: wrap;
+		
+		.text{
+			display: flex;
+			flex-direction: column;
+			text-align: center
+		}
+		
+			button{
+				@include button ($white, $bordeaux, $light-purple);
+				margin-left: 5px;
+				padding: 10px;
+			}
+
+			button:hover, button:active{
+			 	@include button ($white, $dark-purple, $bordeaux);
+			 	margin-left: 5px;
+			 	padding: 10px;
+			}
+		}
+}
+
+@media screen and(max-width:768px){
+	.main>.container-fluid>.row>.suite{
+		height: auto;
+		padding: 10px 20px;
+	}
+}

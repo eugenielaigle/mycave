@@ -13,6 +13,7 @@ include 'header.php';
 ?>
 
 <nav>
+	<img src="img/logo.png" alt="logo">
 	<p>Bonjour <?php echo $_SESSION['pseudo']; ?></p>
 	<a href="index.php"><button>Se Déconnecter</button></a>
 </nav>
@@ -22,22 +23,37 @@ include 'header.php';
 	echo $_GET['msg'];
 	} ?>
 
-	<?php while ($donnees = $req->fetch()) { ?>
-<div class="library">
-	<div class="image" style="background-image: url('img/<?php echo $donnees['picture']; ?>'); width: 150px; height: 200px; background-size: cover;"></div>
-	<h2><?php echo $donnees['name']; ?></h2>
-	<h3>Année:<?php echo $donnees['year']; ?></h3>
-	<h3>Cépage:<?php echo $donnees['grapes']; ?></h3>
-	<h3>Provenance:<?php echo $donnees['region'] . ', ' . $donnees['country']; ?></h3>
-	<p>Description: <?php echo $donnees['description'] ?></p>
-	<a href="fiche_produit_admin.php?id_produit=<?php echo $donnees['id']; ?>"><button>Consulter</button></a>
-	<a href="fiche_produit_update.php?id_produit=<?php echo $donnees['id']; ?>"><button>Modifier</button></a>
-	<a href="fiche_produit_delete.php?id_produit=<?php echo $donnees['id']; ?>"><button>Supprimer</button></a>
-	<a href="fiche_produit_add.php?id_produit=<?php echo $donnees['id']; ?>"><button>Ajouter</button></a>
+<main class="main">
+	<div class="container-fluid library">
 
+	<?php while ($donnees = $req->fetch()) { ?>	
 
+	<div class="row">
+		<div class="col-md-1 col-xs-3 image thumbnail"> 
+			<img src="img/<?php echo $donnees['picture']; ?>" alt="image">
+		</div>
+		<div class="col-md-3 col-xs-8 div">
+			<div class="text">
+				<h2><?php echo $donnees['name']; ?></h2>
+				<h3>Année:<?php echo $donnees['year']; ?></h3>
+				<h3>Cépage:<?php echo $donnees['grapes']; ?></h3>
+				<h3>Provenance:<?php echo $donnees['region'] . ', ' . $donnees['country']; ?></h3>
+			</div>
+		</div>
+		<div class="col-md-6 col-xs-11 div suite">
+				<p>Description: <?php echo $donnees['description'] ?></p>
+		</div>
+		<div class="col-md-2 col-xs-12 div suite">
+			<a href="fiche_produit_admin.php?id_produit=<?php echo $donnees['id']; ?>"><button><i class="fa fa-search" aria-hidden="true"></i></button></a>
+			<a href="fiche_produit_update.php?id_produit=<?php echo $donnees['id']; ?>"><button><i class="fa fa-pencil" aria-hidden="true"></i></button></a>
+			<a href="fiche_produit_delete.php?id_produit=<?php echo $donnees['id']; ?>"><button><i class="fa fa-trash-o" aria-hidden="true"></i></button></a>
+			<a href="fiche_produit_add.php?id_produit=<?php echo $donnees['id']; ?>"><button><i class="fa fa-plus" aria-hidden="true"></i></button></a>
+		</div>
+	</div>
 
 <?php } ?>
 </div>
+</main>
+	
 
 <?php include 'footer.php'; ?>
