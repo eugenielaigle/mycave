@@ -3,18 +3,35 @@
 @import 'font';
 @import 'button';
 
+// Basics start
 body{
 	font-family: $font;
 	font-size: $font-size;
 }
 
+.main{
+	margin-top: 60px;
+}
 
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.thumbnail{
+	border: none;
+	margin: 0;
+}
+// Basics end
+
+// Navbar start
 nav{
 	height: 60px;
 	background-color: $bordeaux;
 	color: $white;
 	width: 100%;
 	position: fixed;
+	z-index: 9;
 	top: 0;
 	left: 0;
 	display: flex;
@@ -35,13 +52,13 @@ nav{
 	}
 
 }
+// Navbar end
 
-.modal{
-	
-	.modal-dialog{
-		position: fixed;
-		z-index: 10;
-		color: $bordeaux;
+// Modal start
+.modal .modal-dialog{
+	margin-left: auto;
+    margin-right: auto;
+	color: $bordeaux;
 	
 		.modal-body{
 		
@@ -58,37 +75,37 @@ nav{
 			}
 
 			.submit:hover, .submit:active{
-			 	@include submit ($dark-purple, $white, $bordeaux);
+			 	@include submit ($white, $dark-purple, $bordeaux);
 			}
 		}
-	}
 }
 
-.main{
-	margin-top: 60px;
-}
+// Modal end
 
-.row{
-	padding: 20px 0;
+// Index start
+.row-index{
+	padding: 25px 0;
 	border: 2px solid $bordeaux;
 	margin-top: -2px;
-	display: flex;
-
-	.thumbnail{
-		border: none;
-	}
 
 	.div{
 		display: flex;
 	    align-items: center;
-	    justify-content: center;
 	    flex-wrap: wrap;
 		
 		.text{
 			display: flex;
 			flex-direction: column;
 			text-align: center
-		}
+
+			h2, h3 p{
+				padding-bottom: 1vh;
+			}
+			.xs-visible{
+				display: none;
+				}
+
+			}
 		
 			button{
 				@include button ($white, $bordeaux, $light-purple);
@@ -101,12 +118,114 @@ nav{
 			 	margin-left: 5px;
 			 	padding: 10px;
 			}
-		}
+	}
+	.suite{
+			display: flex;
+		    align-items: center;
+		    flex-wrap: wrap;
+			padding-right: 10%;
+	}
 }
 
-@media screen and(max-width:768px){
+@media screen and(max-width: 991px){
+
+	.main>.container-fluid>.row-index>.div{
+		justify-content: center;
+		margin-bottom: 2vh;
+	}
+
+	.main>.container-fluid>.row-index>.presentation{
+		margin-bottom: 8vh;
+	}
+
+	.mainp.container-fluid>.row-index>.div>.text>.xs-visible{
+		display: block;
+	}
+
 	.main>.container-fluid>.row>.suite{
-		height: auto;
-		padding: 10px 20px;
+		display: none;
+	}
+
+}
+// Index end
+
+// Fiche Produit start
+
+.main-produit{
+	margin-top: 100px;
+
+	.image{
+		height: 70vh;
+
+		img{
+			width: 65%;
+		}
+	}
+
+	.product-datas{
+	    display: flex;
+    	flex-direction: column;
+    	justify-content: center;
+    	flex-wrap: wrap;
+    	padding-right: 10%;
+
+    	h2, h3, p{
+    		padding-bottom: 2vh;
+    	}
+	}
+	
+	.button{
+		display: flex;
+		justify-content: center;
+
+			button{
+				@include button ($white, $bordeaux, $light-purple);
+				margin: 10px 15px;
+			}
+
+			button:hover, button:active{
+	 			@include button ($white, $dark-purple, $bordeaux);
+			}
+	}
+}
+
+@media screen and(max-width: 991px){
+
+	.main-produit{
+		margin-top: 100px;
+
+		.image{
+			height: 45vh;
+
+			img{
+				width: 30%;
+			}
+		}
+	}
+}
+
+@media screen and(max-width: 768px){
+
+	.main-produit{
+		margin-top: 100px;
+
+		.image{
+			height: 50vh;
+		}
+	}
+}
+
+@media screen and (max-width: 420px) {
+
+	.main-produit{
+		margin-top: 85px;
+
+		.image{
+			height: 45vh;
+
+			img{
+				width: 60%;
+			}
+		}
 	}
 }
