@@ -5,8 +5,9 @@ include 'header.php'; ?>
 
 <nav>
 	<img src="img/logo.png" alt="logo">
-	<p>Bonjour <?php echo $_SESSION['pseudo']; ?></p>
-	<a href="index.php"><button>Se Déconnecter</button></a>
+	<p class="md-visible">Bonjour <?php echo $_SESSION['pseudo']; ?></p>
+	<a class="md-visible" href="index.php"><button>Se Déconnecter</button></a>
+	<a class="xs-visible" href="index.php"><button><i class="fa fa-sign-out" aria-hidden="true"></i></button></a>
 </nav>
 
 

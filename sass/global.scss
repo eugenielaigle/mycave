@@ -38,6 +38,10 @@ nav{
     align-items: center;
     justify-content: space-between;
 
+    .xs-visible{
+		display: none;
+    }
+
 	img{
 		padding: 5px 20px;
 	}
@@ -45,12 +49,30 @@ nav{
 	button{
 		@include button ($bordeaux, $white, $light-purple);
 		margin: 10px 15px;
+		box-shadow: none;
 	}
 
 	button:hover, button:active{
 	 	@include button ($white, $dark-purple, $bordeaux);
+	 	box-shadow: none;
 	}
 
+}
+
+@media all and(max-width: 480px){
+	nav>.md-visible{
+		display: none;
+	}
+
+	nav>.xs-visible{
+		display: block;
+	}
+}
+
+@media all and(max-width: 400px){
+	nav>img{
+		width: 60%;
+	}
 }
 // Navbar end
 
@@ -101,14 +123,14 @@ nav{
 			h2, h3 p{
 				padding-bottom: 1vh;
 			}
-			.xs-visible{
-				display: none;
-				}
+			// .xs-visible{
+			// 	display: none;
+			// 	}
 
 			}
 		
 			button{
-				@include button ($white, $bordeaux, $light-purple);
+				@include button ($white, $light-purple, $light-purple);
 				margin-left: 5px;
 				padding: 10px;
 			}
@@ -123,30 +145,54 @@ nav{
 			display: flex;
 		    align-items: center;
 		    flex-wrap: wrap;
-			padding-right: 10%;
+			// padding-right: 10%;
 	}
 }
 
-@media screen and(max-width: 991px){
+@media all and(max-width: 991px){
 
-	.main>.container-fluid>.row-index>.div{
+	.row-index>.div{
 		justify-content: center;
-		margin-bottom: 2vh;
+		margin-bottom: 5vh;
 	}
 
-	.main>.container-fluid>.row-index>.presentation{
-		margin-bottom: 8vh;
-	}
+	// .row-index>.presentation{
+	// 	margin-bottom: 2vh;
+	// }
 
-	.mainp.container-fluid>.row-index>.div>.text>.xs-visible{
-		display: block;
-	}
+	// .main>.container-fluid>.row-index>.div>.text>.xs-visible{
+	// 	display: block;
+	// }
 
-	.main>.container-fluid>.row>.suite{
+	.row>.suite{
 		display: none;
 	}
 
 }
+@media all and (max-width:769px){
+	.row-index{
+		border: none;
+		padding-top: 15px;
+	}
+	.row-index>.buttons{
+		justify-content: center;
+	}
+}
+
+// @media all and(max-width: 480px){
+// 	.main>.container-fluid>.row-index{
+// 		height: 100vh;
+// 	}
+// 	.main>.container-fluid>.row-index>.buttons{
+// 		align-items: flex-start;
+// 	}
+// 	.main>.container-fluid>.row-index>.thumbnail{
+// 		height: 30vh;
+// 	}
+// 	.main>.container-fluid>.row-index>.thumbnail>img{
+// 		width: 43%;
+// 	}
+// }
 // Index end
 
 // Fiche Produit start
@@ -179,7 +225,7 @@ nav{
 		justify-content: center;
 
 			button{
-				@include button ($white, $bordeaux, $light-purple);
+				@include button ($white, $light-purple, $light-purple);
 				margin: 10px 15px;
 			}
 
@@ -187,12 +233,15 @@ nav{
 	 			@include button ($white, $dark-purple, $bordeaux);
 			}
 	}
+	.xs-visible{
+		display: none;
+	}
 }
 
-@media screen and(max-width: 991px){
+@media all and(max-width: 991px){
 
 	.main-produit{
-		margin-top: 100px;
+		margin-top: 80px;
 
 		.image{
 			height: 45vh;
@@ -204,27 +253,61 @@ nav{
 	}
 }
 
-@media screen and(max-width: 768px){
+@media all and(max-width: 768px){
 
 	.main-produit{
-		margin-top: 100px;
+		margin-top: 70px;
 
 		.image{
-			height: 50vh;
+			height: 45vh;
 		}
 	}
 }
 
-@media screen and (max-width: 420px) {
+@media all and (max-width: 570px) {
 
 	.main-produit{
-		margin-top: 85px;
+		margin-top: 70px;
 
 		.image{
 			height: 45vh;
 
 			img{
-				width: 60%;
+				width: 45%;
+			}
+		}
+		.md-visible{
+			display: none;
+		}
+		
+		.xs-visible {
+			display: flex;
+
+			button{
+				@include button ($white, $bordeaux, $light-purple);
+				margin: 10px 5px;
+				padding: 10px 10px;
+			}
+
+			button:hover, button:active{
+	 			@include button ($white, $dark-purple, $bordeaux);
+	 			margin: 10px 5px;
+				padding: 10px 10px;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 370px) {
+
+	.main-produit{
+		margin-top: 70px;
+
+		.image{
+			height: 40vh;
+
+			img{
+				width: 55%;
 			}
 		}
 	}

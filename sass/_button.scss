@@ -6,6 +6,9 @@
 	text-decoration: none;
 	text-transform: uppercase;
 	border-color: $border;
+  -moz-box-shadow: 8px 8px 12px #aaa; 
+  -webkit-box-shadow: 8px 8px 12px #aaa; 
+  box-shadow: 8px 8px 12px #555; 
 }
 
 @mixin submit ($text, $background, $border){
@@ -16,4 +19,7 @@
 	text-decoration: none;
 	text-transform: uppercase;
 	border-color: $border;
+  -moz-box-shadow: 8px 8px 12px #aaa; 
+  -webkit-box-shadow: 8px 8px 12px #aaa; 
+  box-shadow: 8px 8px 12px #555; 
 }

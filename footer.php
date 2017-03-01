@@ -11,19 +11,11 @@
 	<!-- Bootstrap Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+	<!-- Script Swiper -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.jquery.min.js"></script>
+	
 	<!-- JS -->
 	<script src="js/basics.js"></script>
-	<script src="path/to/jquery.js"></script>
-    <script src="path/to/swiper.jquery.min.js"></script>
-	<script>        
-  
-	  var mySwiper = new Swiper ('.swiper-container', {
-	    // Optional parameters
-	    direction: 'vertical',
-	    loop: true,
-  		})    
-  		    
-  	</script>
-
+	
 </body>
 </html>

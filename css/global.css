@@ -63,6 +63,9 @@ nav {
   align-items: center;
   justify-content: space-between; }
 
+nav .xs-visible {
+  display: none; }
+
 nav img {
   padding: 5px 20px; }
 
@@ -74,7 +77,11 @@ nav button {
   text-decoration: none;
   text-transform: uppercase;
   border-color: #885C7E;
-  margin: 10px 15px; }
+  -moz-box-shadow: 8px 8px 12px #aaa;
+  -webkit-box-shadow: 8px 8px 12px #aaa;
+  box-shadow: 8px 8px 12px #555;
+  margin: 10px 15px;
+  box-shadow: none; }
 
 nav button:hover, nav button:active {
   background: #3E0018;
@@ -83,7 +90,21 @@ nav button:hover, nav button:active {
   padding: 10px 25px;
   text-decoration: none;
   text-transform: uppercase;
-  border-color: #88002D; }
+  border-color: #88002D;
+  -moz-box-shadow: 8px 8px 12px #aaa;
+  -webkit-box-shadow: 8px 8px 12px #aaa;
+  box-shadow: 8px 8px 12px #555;
+  box-shadow: none; }
+
+@media all and (max-width: 480px) {
+  nav > .md-visible {
+    display: none; }
+  nav > .xs-visible {
+    display: block; } }
+
+@media all and (max-width: 400px) {
+  nav > img {
+    width: 60%; } }
 
 .modal .modal-dialog {
   margin-left: auto;
@@ -103,7 +124,10 @@ nav button:hover, nav button:active {
   padding: 5px 15px;
   text-decoration: none;
   text-transform: uppercase;
-  border-color: #885C7E; }
+  border-color: #885C7E;
+  -moz-box-shadow: 8px 8px 12px #aaa;
+  -webkit-box-shadow: 8px 8px 12px #aaa;
+  box-shadow: 8px 8px 12px #555; }
 
 .modal .modal-dialog .modal-body .submit:hover, .modal .modal-dialog .modal-body .submit:active {
   background: #3E0018;
@@ -112,7 +136,10 @@ nav button:hover, nav button:active {
   padding: 5px 15px;
   text-decoration: none;
   text-transform: uppercase;
-  border-color: #88002D; }
+  border-color: #88002D;
+  -moz-box-shadow: 8px 8px 12px #aaa;
+  -webkit-box-shadow: 8px 8px 12px #aaa;
+  box-shadow: 8px 8px 12px #555; }
 
 .row-index {
   padding: 25px 0;
@@ -130,17 +157,17 @@ nav button:hover, nav button:active {
   text-align: center h2, h3 p;
   text-align-padding-bottom: 1vh; }
 
-.row-index .div .text .xs-visible {
-  display: none; }
-
 .row-index .div button {
-  background: #88002D;
+  background: #885C7E;
   border-radius: 10px;
   color: white;
   padding: 10px 25px;
   text-decoration: none;
   text-transform: uppercase;
   border-color: #885C7E;
+  -moz-box-shadow: 8px 8px 12px #aaa;
+  -webkit-box-shadow: 8px 8px 12px #aaa;
+  box-shadow: 8px 8px 12px #555;
   margin-left: 5px;
   padding: 10px; }
 
@@ -152,25 +179,30 @@ nav button:hover, nav button:active {
   text-decoration: none;
   text-transform: uppercase;
   border-color: #88002D;
+  -moz-box-shadow: 8px 8px 12px #aaa;
+  -webkit-box-shadow: 8px 8px 12px #aaa;
+  box-shadow: 8px 8px 12px #555;
   margin-left: 5px;
   padding: 10px; }
 
 .row-index .suite {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  padding-right: 10%; }
+  flex-wrap: wrap; }
 
-@media screen and (max-width: 991px) {
-  .main > .container-fluid > .row-index > .div {
+@media all and (max-width: 991px) {
+  .row-index > .div {
     justify-content: center;
-    margin-bottom: 2vh; }
-  .main > .container-fluid > .row-index > .presentation {
-    margin-bottom: 8vh; }
-  .mainp.container-fluid > .row-index > .div > .text > .xs-visible {
-    display: block; }
-  .main > .container-fluid > .row > .suite {
+    margin-bottom: 5vh; }
+  .row > .suite {
     display: none; } }
+
+@media all and (max-width: 769px) {
+  .row-index {
+    border: none;
+    padding-top: 15px; }
+  .row-index > .buttons {
+    justify-content: center; } }
 
 .main-produit {
   margin-top: 100px; }
@@ -196,13 +228,16 @@ nav button:hover, nav button:active {
   justify-content: center; }
 
 .main-produit .button button {
-  background: #88002D;
+  background: #885C7E;
   border-radius: 10px;
   color: white;
   padding: 10px 25px;
   text-decoration: none;
   text-transform: uppercase;
   border-color: #885C7E;
+  -moz-box-shadow: 8px 8px 12px #aaa;
+  -webkit-box-shadow: 8px 8px 12px #aaa;
+  box-shadow: 8px 8px 12px #555;
   margin: 10px 15px; }
 
 .main-produit .button button:hover, .main-produit .button button:active {
@@ -212,26 +247,70 @@ nav button:hover, nav button:active {
   padding: 10px 25px;
   text-decoration: none;
   text-transform: uppercase;
-  border-color: #88002D; }
+  border-color: #88002D;
+  -moz-box-shadow: 8px 8px 12px #aaa;
+  -webkit-box-shadow: 8px 8px 12px #aaa;
+  box-shadow: 8px 8px 12px #555; }
 
-@media screen and (max-width: 991px) {
+.main-produit .xs-visible {
+  display: none; }
+
+@media all and (max-width: 991px) {
   .main-produit {
-    margin-top: 100px; }
+    margin-top: 80px; }
   .main-produit .image {
     height: 45vh; }
   .main-produit .image img {
     width: 30%; } }
 
-@media screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
   .main-produit {
-    margin-top: 100px; }
+    margin-top: 70px; }
   .main-produit .image {
-    height: 50vh; } }
+    height: 45vh; } }
 
-@media screen and (max-width: 420px) {
+@media all and (max-width: 570px) {
   .main-produit {
-    margin-top: 85px; }
+    margin-top: 70px; }
   .main-produit .image {
     height: 45vh; }
   .main-produit .image img {
-    width: 60%; } }
+    width: 45%; }
+  .main-produit .md-visible {
+    display: none; }
+  .main-produit .xs-visible {
+    display: flex; }
+  .main-produit .xs-visible button {
+    background: #88002D;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-color: #885C7E;
+    -moz-box-shadow: 8px 8px 12px #aaa;
+    -webkit-box-shadow: 8px 8px 12px #aaa;
+    box-shadow: 8px 8px 12px #555;
+    margin: 10px 5px;
+    padding: 10px 10px; }
+  .main-produit .xs-visible button:hover, .main-produit .xs-visible button:active {
+    background: #3E0018;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-color: #88002D;
+    -moz-box-shadow: 8px 8px 12px #aaa;
+    -webkit-box-shadow: 8px 8px 12px #aaa;
+    box-shadow: 8px 8px 12px #555;
+    margin: 10px 5px;
+    padding: 10px 10px; } }
+
+@media all and (max-width: 370px) {
+  .main-produit {
+    margin-top: 70px; }
+  .main-produit .image {
+    height: 40vh; }
+  .main-produit .image img {
+    width: 55%; } }
