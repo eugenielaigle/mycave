@@ -133,12 +133,12 @@ nav{
 
 					#confirmDelete, .retour{
 						@include submit ($white, $bordeaux, $light-purple);
-						margin: 2vh 2vw 0 0;
+						margin: 10vh 6vw 5vh 6vw;;
 					}
 
 					#confirmDelete:hover, .retour:hover, .retour:active, #confirmDelete:active{
 					 	@include submit ($white, $dark-purple, $bordeaux);
-					 	margin: 2vh 2vw 0 0;
+					 	margin: 10vh 6vw 5vh 6vw;;
 					}
 				}
 		}
@@ -183,6 +183,10 @@ nav{
 	}
 	.buttons{
 		justify-content: center;
+
+		.xs-visible{
+			display: none;
+		}
 	}
 }
 
@@ -210,6 +214,10 @@ nav{
 	.row-index>.buttons{
 		justify-content: center;
 	}
+
+	.row-index .buttons .xs-visible{
+		display: block;
+	}
 }
 
 // Index end
@@ -232,12 +240,12 @@ nav{
 
 					#confirmDelete, .retour{
 						@include submit ($white, $bordeaux, $light-purple);
-						margin: 2vh 2vw 0 0;
+						margin: 10vh 6vw 5vh 6vw;;
 					}
 
 					#confirmDelete:hover, .retour:hover, .retour:active, #confirmDelete:active{
 					 	@include submit ($white, $dark-purple, $bordeaux);
-					 	margin: 2vh 2vw 0 0;
+					 	margin: 10vh 6vw 5vh 6vw;;
 					}
 				}
 		}

@@ -72,7 +72,7 @@ include 'header.php';
 								<a href="fiche_produit_admin.php?id_produit=<?php echo $donnees['id']; ?>"><button><i class="fa fa-search" aria-hidden="true"></i></button></a>
 								<a href="fiche_produit_update.php?id_produit=<?php echo $donnees['id']; ?>"><button><i class="fa fa-pencil" aria-hidden="true"></i></button></a>
 								<button data-toggle="modal" data-target="#myModal<?php echo $donnees['id']; ?>"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-
+								<a href="fiche_produit_add.php"><button class="xs-visible"><i class="fa fa-plus" aria-hidden="true"></i></button></a>
 							</div>
 						</div> <!-- end row -->
 					</div> <!-- end swiper slide -->
@@ -80,7 +80,7 @@ include 'header.php';
 	
 <?php } ?>
 
-				<a href="fiche_produit_add.php ?>"><i class="add fa fa-plus-circle fa-4x" aria-hidden="true"></i></a>
+				<a href="fiche_produit_add.php"><i class="add fa fa-plus-circle fa-4x" aria-hidden="true"></i></a>
 			</div> <!-- end swipper-wrapper -->		
 		</div> <!-- end container fluid -->
 	</div> <!-- end swiper-container -->

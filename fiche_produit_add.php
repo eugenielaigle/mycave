@@ -45,9 +45,11 @@ include 'header.php'; ?>
 				</div>
 		</form>
 				<div class="col-md-12 col-xs-12 submit">
-					<a href="admin_index.php ?>"><button>Retour</button></a>
+					<a href="admin_index.php"><button>Retour</button></a>
 				</div>
 
 		</div> <!-- end row -->
 	</div> <!-- end container -->
 </main>
+
+<?php include 'footer.php'; ?>

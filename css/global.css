@@ -174,7 +174,7 @@ nav button:hover, nav button:active {
   -moz-box-shadow: 8px 8px 12px #aaa;
   -webkit-box-shadow: 8px 8px 12px #aaa;
   box-shadow: 8px 8px 12px #555;
-  margin: 2vh 2vw 0 0; }
+  margin: 10vh 6vw 5vh 6vw; }
 
 .row-index .modal .modal-dialog .modal-body #confirmDelete:hover, .row-index .modal .modal-dialog .modal-body .retour:hover, .row-index .modal .modal-dialog .modal-body .retour:active, .row-index .modal .modal-dialog .modal-body #confirmDelete:active {
   background: #3E0018;
@@ -187,7 +187,7 @@ nav button:hover, nav button:active {
   -moz-box-shadow: 8px 8px 12px #aaa;
   -webkit-box-shadow: 8px 8px 12px #aaa;
   box-shadow: 8px 8px 12px #555;
-  margin: 2vh 2vw 0 0; }
+  margin: 10vh 6vw 5vh 6vw; }
 
 .row-index .div {
   display: flex;
@@ -236,6 +236,9 @@ nav button:hover, nav button:active {
 .row-index .buttons {
   justify-content: center; }
 
+.row-index .buttons .xs-visible {
+  display: none; }
+
 .modal {
   position: absolute; }
 
@@ -251,7 +254,9 @@ nav button:hover, nav button:active {
     border: none;
     padding-top: 15px; }
   .row-index > .buttons {
-    justify-content: center; } }
+    justify-content: center; }
+  .row-index .buttons .xs-visible {
+    display: block; } }
 
 .main-produit {
   margin-top: 100px; }
@@ -277,7 +282,7 @@ nav button:hover, nav button:active {
   -moz-box-shadow: 8px 8px 12px #aaa;
   -webkit-box-shadow: 8px 8px 12px #aaa;
   box-shadow: 8px 8px 12px #555;
-  margin: 2vh 2vw 0 0; }
+  margin: 10vh 6vw 5vh 6vw; }
 
 .main-produit .modal .modal-dialog .modal-body #confirmDelete:hover, .main-produit .modal .modal-dialog .modal-body .retour:hover, .main-produit .modal .modal-dialog .modal-body .retour:active, .main-produit .modal .modal-dialog .modal-body #confirmDelete:active {
   background: #3E0018;
@@ -290,7 +295,7 @@ nav button:hover, nav button:active {
   -moz-box-shadow: 8px 8px 12px #aaa;
   -webkit-box-shadow: 8px 8px 12px #aaa;
   box-shadow: 8px 8px 12px #555;
-  margin: 2vh 2vw 0 0; }
+  margin: 10vh 6vw 5vh 6vw; }
 
 .main-produit .image {
   height: 70vh; }
