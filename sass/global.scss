@@ -11,6 +11,14 @@ body{
 
 .main{
 	margin-top: 60px;
+
+	.add{
+	position: fixed;
+	z-index: 5;
+	bottom: 2vh;
+	right: 2vw;
+	color: $dark-purple;
+	}
 }
 
 .row{
@@ -22,6 +30,8 @@ body{
 	border: none;
 	margin: 0;
 }
+
+
 // Basics end
 
 // Navbar start
@@ -110,6 +120,31 @@ nav{
 	border: 2px solid $bordeaux;
 	margin-top: -2px;
 
+	// Modal start
+		.modal .modal-dialog{
+			margin-left: auto;
+		    margin-right: auto;
+			color: $bordeaux;
+			
+				.modal-body{
+					    display: flex;
+					    justify-content: center;
+					    flex-wrap: wrap;
+
+					#confirmDelete, .retour{
+						@include submit ($white, $bordeaux, $light-purple);
+						margin: 2vh 2vw 0 0;
+					}
+
+					#confirmDelete:hover, .retour:hover, .retour:active, #confirmDelete:active{
+					 	@include submit ($white, $dark-purple, $bordeaux);
+					 	margin: 2vh 2vw 0 0;
+					}
+				}
+		}
+
+		// Modal end
+
 	.div{
 		display: flex;
 	    align-items: center;
@@ -145,8 +180,14 @@ nav{
 			display: flex;
 		    align-items: center;
 		    flex-wrap: wrap;
-			// padding-right: 10%;
 	}
+	.buttons{
+		justify-content: center;
+	}
+}
+
+.modal{
+	position: absolute;
 }
 
 @media all and(max-width: 991px){
@@ -155,14 +196,6 @@ nav{
 		justify-content: center;
 		margin-bottom: 5vh;
 	}
-
-	// .row-index>.presentation{
-	// 	margin-bottom: 2vh;
-	// }
-
-	// .main>.container-fluid>.row-index>.div>.text>.xs-visible{
-	// 	display: block;
-	// }
 
 	.row>.suite{
 		display: none;
@@ -179,26 +212,37 @@ nav{
 	}
 }
 
-// @media all and(max-width: 480px){
-// 	.main>.container-fluid>.row-index{
-// 		height: 100vh;
-// 	}
-// 	.main>.container-fluid>.row-index>.buttons{
-// 		align-items: flex-start;
-// 	}
-// 	.main>.container-fluid>.row-index>.thumbnail{
-// 		height: 30vh;
-// 	}
-// 	.main>.container-fluid>.row-index>.thumbnail>img{
-// 		width: 43%;
-// 	}
-// }
 // Index end
 
 // Fiche Produit start
 
 .main-produit{
 	margin-top: 100px;
+
+	// Modal start
+		.modal .modal-dialog{
+			margin-left: auto;
+		    margin-right: auto;
+			color: $bordeaux;
+			
+				.modal-body{
+					    display: flex;
+					    justify-content: center;
+					    flex-wrap: wrap;
+
+					#confirmDelete, .retour{
+						@include submit ($white, $bordeaux, $light-purple);
+						margin: 2vh 2vw 0 0;
+					}
+
+					#confirmDelete:hover, .retour:hover, .retour:active, #confirmDelete:active{
+					 	@include submit ($white, $dark-purple, $bordeaux);
+					 	margin: 2vh 2vw 0 0;
+					}
+				}
+		}
+
+		// Modal end
 
 	.image{
 		height: 70vh;
@@ -311,4 +355,91 @@ nav{
 			}
 		}
 	}
+}
+
+//fiche produit update start
+.main-produit{
+
+	form{
+		width: 100%;
+
+		h3{
+			font-weight: bold;
+		}
+	}
+
+	.update-pdt img{
+		margin-bottom: 5vh;
+	}
+
+	input[type=file]{
+		display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    margin: auto;
+	    font: caption;
+	    @include input ($white, $light-purple, $bordeaux);
+	}
+
+	input[type=file]:hover{
+		display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    margin: auto;
+	    cursor: pointer;
+	    font: caption;
+	    @include input ($white, $dark-purple, $bordeaux);
+	} 
+
+	.cells{
+		display: flex;
+		flex-direction: column;
+
+		textarea{
+			margin-bottom: 2vh;
+		}
+	}
+
+	.margin-top{
+		margin-top: 12vh;
+	}
+	
+	.submit{
+		display: flex;
+		justify-content: center;
+
+		input{
+			@include submit ($white, $dark-purple, $bordeaux);
+				padding: 10px 25px;
+				margin: 2vh 2vw 0 0;
+		}
+
+		input:hover, input:active{
+			@include submit ($white, $bordeaux, $light-purple);
+			    padding: 10px 25px;
+			    margin: 2vh 2vw 0 0;
+		}
+
+		button{
+				@include submit ($white, $dark-purple, $bordeaux);
+				padding: 10px 25px;
+				margin: 2vh 2vw 0 0;
+		}
+
+		button:hover, button:active{
+			@include submit ($white, $bordeaux, $light-purple);
+			    padding: 10px 25px;
+			    margin: 2vh 2vw 0 0;
+	}
+}
+}
+
+@media all and (max-width: 480px){
+	input[type=file]{
+		width: 100%;
+	}
+	input[type=file]:hover{
+		width: 100%;
+	}
+	
 }

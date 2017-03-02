@@ -28,3 +28,19 @@ swiperMobile();
 $(window).resize(function() {
 	swiperMobile();
 });
+
+
+$('.suppr').click(function() {
+	var id = $(this).data('id');
+	var idProduct = 'id_produit=' + id;
+	var urlId = '"fiche_produit_delete_post.php?id_produit=' + id + '"' ;
+	console.log($(this).parents('.fiche').prevAll('#showModal'));
+	$(this).parents('.fiche').nextAll('#showModal').load('fiche_produit_delete.php',idProduct, function(){
+		$('#confirmDelete').on('click',function() {
+			$(this).attr('href', urlId);
+		});
+		$('#showModal').fadeIn(1000);
+	});
+});
+
+

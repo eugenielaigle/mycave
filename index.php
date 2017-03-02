@@ -15,7 +15,10 @@
 
 					<div data-slide="swiper-slide" class="swiper-slide">
 						<div class="row row-index">
-							<div class="col-md-1 col-xs-12 image thumbnail div"> 
+							<div class="col-md-1 col-xs-12 image thumbnail div">
+								<?php if ($donnees['picture'] === '.'){
+									$donnees['picture'] = 'generic.jpg';
+								} ?> 
 								<img src="img/<?php echo $donnees['picture']; ?>" alt="image">
 							</div>
 							<div class="col-md-3 col-xs-12 div presentation">

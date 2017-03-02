@@ -23,3 +23,16 @@
   -webkit-box-shadow: 8px 8px 12px #aaa; 
   box-shadow: 8px 8px 12px #555; 
 }
+
+@mixin input ($text, $background, $border){
+	background: $background;
+	border-radius: 5px;
+	color: $text;
+	padding: 5px 15px;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-color: $border;
+  -moz-box-shadow: 8px 8px 12px #aaa; 
+  -webkit-box-shadow: 8px 8px 12px #aaa; 
+  box-shadow: 8px 8px 12px #555; 
+}

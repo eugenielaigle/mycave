@@ -42,6 +42,13 @@ body {
 .main {
   margin-top: 60px; }
 
+.main .add {
+  position: fixed;
+  z-index: 5;
+  bottom: 2vh;
+  right: 2vw;
+  color: #3E0018; }
+
 .row {
   display: flex;
   flex-wrap: wrap; }
@@ -146,6 +153,42 @@ nav button:hover, nav button:active {
   border: 2px solid #88002D;
   margin-top: -2px; }
 
+.row-index .modal .modal-dialog {
+  margin-left: auto;
+  margin-right: auto;
+  color: #88002D; }
+
+.row-index .modal .modal-dialog .modal-body {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.row-index .modal .modal-dialog .modal-body #confirmDelete, .row-index .modal .modal-dialog .modal-body .retour {
+  background: #88002D;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-color: #885C7E;
+  -moz-box-shadow: 8px 8px 12px #aaa;
+  -webkit-box-shadow: 8px 8px 12px #aaa;
+  box-shadow: 8px 8px 12px #555;
+  margin: 2vh 2vw 0 0; }
+
+.row-index .modal .modal-dialog .modal-body #confirmDelete:hover, .row-index .modal .modal-dialog .modal-body .retour:hover, .row-index .modal .modal-dialog .modal-body .retour:active, .row-index .modal .modal-dialog .modal-body #confirmDelete:active {
+  background: #3E0018;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-color: #88002D;
+  -moz-box-shadow: 8px 8px 12px #aaa;
+  -webkit-box-shadow: 8px 8px 12px #aaa;
+  box-shadow: 8px 8px 12px #555;
+  margin: 2vh 2vw 0 0; }
+
 .row-index .div {
   display: flex;
   align-items: center;
@@ -190,6 +233,12 @@ nav button:hover, nav button:active {
   align-items: center;
   flex-wrap: wrap; }
 
+.row-index .buttons {
+  justify-content: center; }
+
+.modal {
+  position: absolute; }
+
 @media all and (max-width: 991px) {
   .row-index > .div {
     justify-content: center;
@@ -206,6 +255,42 @@ nav button:hover, nav button:active {
 
 .main-produit {
   margin-top: 100px; }
+
+.main-produit .modal .modal-dialog {
+  margin-left: auto;
+  margin-right: auto;
+  color: #88002D; }
+
+.main-produit .modal .modal-dialog .modal-body {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.main-produit .modal .modal-dialog .modal-body #confirmDelete, .main-produit .modal .modal-dialog .modal-body .retour {
+  background: #88002D;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-color: #885C7E;
+  -moz-box-shadow: 8px 8px 12px #aaa;
+  -webkit-box-shadow: 8px 8px 12px #aaa;
+  box-shadow: 8px 8px 12px #555;
+  margin: 2vh 2vw 0 0; }
+
+.main-produit .modal .modal-dialog .modal-body #confirmDelete:hover, .main-produit .modal .modal-dialog .modal-body .retour:hover, .main-produit .modal .modal-dialog .modal-body .retour:active, .main-produit .modal .modal-dialog .modal-body #confirmDelete:active {
+  background: #3E0018;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-color: #88002D;
+  -moz-box-shadow: 8px 8px 12px #aaa;
+  -webkit-box-shadow: 8px 8px 12px #aaa;
+  box-shadow: 8px 8px 12px #555;
+  margin: 2vh 2vw 0 0; }
 
 .main-produit .image {
   height: 70vh; }
@@ -314,3 +399,123 @@ nav button:hover, nav button:active {
     height: 40vh; }
   .main-produit .image img {
     width: 55%; } }
+
+.main-produit form {
+  width: 100%; }
+
+.main-produit form h3 {
+  font-weight: bold; }
+
+.main-produit .update-pdt img {
+  margin-bottom: 5vh; }
+
+.main-produit input[type=file] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font: caption;
+  background: #885C7E;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-color: #88002D;
+  -moz-box-shadow: 8px 8px 12px #aaa;
+  -webkit-box-shadow: 8px 8px 12px #aaa;
+  box-shadow: 8px 8px 12px #555; }
+
+.main-produit input[type=file]:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  cursor: pointer;
+  font: caption;
+  background: #3E0018;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-color: #88002D;
+  -moz-box-shadow: 8px 8px 12px #aaa;
+  -webkit-box-shadow: 8px 8px 12px #aaa;
+  box-shadow: 8px 8px 12px #555; }
+
+.main-produit .cells {
+  display: flex;
+  flex-direction: column; }
+
+.main-produit .cells textarea {
+  margin-bottom: 2vh; }
+
+.main-produit .margin-top {
+  margin-top: 12vh; }
+
+.main-produit .submit {
+  display: flex;
+  justify-content: center; }
+
+.main-produit .submit input {
+  background: #3E0018;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-color: #88002D;
+  -moz-box-shadow: 8px 8px 12px #aaa;
+  -webkit-box-shadow: 8px 8px 12px #aaa;
+  box-shadow: 8px 8px 12px #555;
+  padding: 10px 25px;
+  margin: 2vh 2vw 0 0; }
+
+.main-produit .submit input:hover, .main-produit .submit input:active {
+  background: #88002D;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-color: #885C7E;
+  -moz-box-shadow: 8px 8px 12px #aaa;
+  -webkit-box-shadow: 8px 8px 12px #aaa;
+  box-shadow: 8px 8px 12px #555;
+  padding: 10px 25px;
+  margin: 2vh 2vw 0 0; }
+
+.main-produit .submit button {
+  background: #3E0018;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-color: #88002D;
+  -moz-box-shadow: 8px 8px 12px #aaa;
+  -webkit-box-shadow: 8px 8px 12px #aaa;
+  box-shadow: 8px 8px 12px #555;
+  padding: 10px 25px;
+  margin: 2vh 2vw 0 0; }
+
+.main-produit .submit button:hover, .main-produit .submit button:active {
+  background: #88002D;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-color: #885C7E;
+  -moz-box-shadow: 8px 8px 12px #aaa;
+  -webkit-box-shadow: 8px 8px 12px #aaa;
+  box-shadow: 8px 8px 12px #555;
+  padding: 10px 25px;
+  margin: 2vh 2vw 0 0; }
+
+@media all and (max-width: 480px) {
+  input[type=file] {
+    width: 100%; }
+  input[type=file]:hover {
+    width: 100%; } }
