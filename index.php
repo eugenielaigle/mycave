@@ -31,7 +31,7 @@
 
 					<div data-slide="swiper-slide" class="swiper-slide">
 						<div class="row row-index">
-							<div class="col-md-1 col-xs-12 image thumbnail div">
+							<div class="col-md-1 col-xs-12 image thumbnail div margin-top">
 								<?php if ($donnees['picture'] === '.'){
 									$donnees['picture'] = 'generic.jpg';
 								} ?> 

@@ -268,14 +268,34 @@ footer{
 	}
 	.row-index>.buttons{
 		justify-content: center;
+		margin-bottom: 1vh;
 	}
 
 	.row-index .buttons .xs-visible{
 		display: block;
 	}
+		.row-index .buttons .xs-visible{
+		display: block;
+	}
+	.row-index>.margin-top{
+		margin-top: 6vh;
+	}
+	.row-index>.thumbnail{
+		height: 50vh;
+			}
+	.row-index>.thumbnail>img{
+		height: 100%;
+	}
+	.row-index>.div>button{
+		margin-left: 10px;
+	}
 
 }
-
+@media all and (max-width:480px){
+	.row-index>.margin-top{
+		margin-top: 1vh;
+	}
+}
 // Index end
 
 // Fiche Produit start
@@ -359,7 +379,7 @@ footer{
 			height: 45vh;
 
 			img{
-				width: 30%;
+				width: 45%;
 			}
 		}
 	}
@@ -469,7 +489,7 @@ footer{
 	}
 
 	.margin-top{
-		margin-top: 12vh;
+		margin-top: 6vh;
 	}
 	
 	.submit{

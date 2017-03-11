@@ -67,7 +67,7 @@ include 'header.php';
 										</div><!-- /.modal -->
 							
 							
-							<div class="col-md-1 col-xs-12 image thumbnail div"> 
+							<div class="col-md-1 col-xs-12 image thumbnail div margin-top"> 
 								<?php if ($donnees['picture'] === '.'){
 									$donnees['picture'] = 'generic.jpg';
 								} ?>
