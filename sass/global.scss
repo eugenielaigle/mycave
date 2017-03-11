@@ -136,6 +136,7 @@ nav{
 					    display: flex;
 					    justify-content: center;
 				}
+
 				.modal-footer{
 						display: flex;
 					    justify-content: center;
@@ -151,7 +152,6 @@ nav{
 						}
 					}
 		}
-
 		// Modal end
 
 	.div{
@@ -167,11 +167,8 @@ nav{
 			h2, h3 p{
 				padding-bottom: 1vh;
 			}
-			// .xs-visible{
-			// 	display: none;
-			// 	}
 
-			}
+		}
 		
 			button{
 				@include button ($white, $light-purple, $light-purple);
@@ -255,7 +252,12 @@ footer{
 	.row>.suite{
 		display: none;
 	}
-
+	.row-index .buttons .xs-visible{
+		display: block;
+	}
+	.row-index .buttons .xs-visible{
+		display: block;
+	}
 	footer{
 		display: none;
 	}
@@ -271,12 +273,6 @@ footer{
 		margin-bottom: 1vh;
 	}
 
-	.row-index .buttons .xs-visible{
-		display: block;
-	}
-		.row-index .buttons .xs-visible{
-		display: block;
-	}
 	.row-index>.margin-top{
 		margin-top: 6vh;
 	}

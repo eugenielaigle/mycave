@@ -291,6 +291,10 @@ footer .pagination > li > a:focus, footer .pagination > li > a:hover, footer .pa
     margin-bottom: 5vh; }
   .row > .suite {
     display: none; }
+  .row-index .buttons .xs-visible {
+    display: block; }
+  .row-index .buttons .xs-visible {
+    display: block; }
   footer {
     display: none; } }
 
@@ -301,10 +305,6 @@ footer .pagination > li > a:focus, footer .pagination > li > a:hover, footer .pa
   .row-index > .buttons {
     justify-content: center;
     margin-bottom: 1vh; }
-  .row-index .buttons .xs-visible {
-    display: block; }
-  .row-index .buttons .xs-visible {
-    display: block; }
   .row-index > .margin-top {
     margin-top: 6vh; }
   .row-index > .thumbnail {
