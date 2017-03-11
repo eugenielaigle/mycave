@@ -42,20 +42,21 @@ body {
 .main {
   margin-top: 60px; }
 
-.main .add {
-  position: fixed;
-  z-index: 5;
-  bottom: 2vh;
-  right: 2vw;
-  color: #3E0018; }
-
 .row {
   display: flex;
   flex-wrap: wrap; }
 
 .thumbnail {
   border: none;
-  margin: 0; }
+  margin: 0;
+  background-color: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+@media all and (max-width: 991px) {
+  body .modal-backdrop {
+    z-index: 0 !important;
+    background-color: transparent !important; } }
 
 nav {
   height: 60px;
@@ -116,7 +117,8 @@ nav button:hover, nav button:active {
 .modal .modal-dialog {
   margin-left: auto;
   margin-right: auto;
-  color: #88002D; }
+  color: #88002D;
+  top: 10vh; }
 
 .modal .modal-dialog .modal-body input, .modal .modal-dialog .modal-body input:active {
   border-radius: 5px; }
@@ -149,7 +151,7 @@ nav button:hover, nav button:active {
   box-shadow: 8px 8px 12px #555; }
 
 .row-index {
-  padding: 25px 0;
+  padding: 20px 0;
   border: 2px solid #88002D;
   margin-top: -2px; }
 
@@ -160,10 +162,13 @@ nav button:hover, nav button:active {
 
 .row-index .modal .modal-dialog .modal-body {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap; }
+  justify-content: center; }
 
-.row-index .modal .modal-dialog .modal-body #confirmDelete, .row-index .modal .modal-dialog .modal-body .retour {
+.row-index .modal .modal-dialog .modal-footer {
+  display: flex;
+  justify-content: center; }
+
+.row-index .modal .modal-dialog .modal-footer #confirmDelete, .row-index .modal .modal-dialog .modal-footer .retour {
   background: #88002D;
   border-radius: 5px;
   color: white;
@@ -174,9 +179,9 @@ nav button:hover, nav button:active {
   -moz-box-shadow: 8px 8px 12px #aaa;
   -webkit-box-shadow: 8px 8px 12px #aaa;
   box-shadow: 8px 8px 12px #555;
-  margin: 10vh 6vw 5vh 6vw; }
+  margin-right: 2vw; }
 
-.row-index .modal .modal-dialog .modal-body #confirmDelete:hover, .row-index .modal .modal-dialog .modal-body .retour:hover, .row-index .modal .modal-dialog .modal-body .retour:active, .row-index .modal .modal-dialog .modal-body #confirmDelete:active {
+.row-index .modal .modal-dialog .modal-footer #confirmDelete:hover, .row-index .modal .modal-dialog .modal-footer .retour:hover, .row-index .modal .modal-dialog .modal-footer .retour:active, .row-index .modal .modal-dialog .modal-footer #confirmDelete:active {
   background: #3E0018;
   border-radius: 5px;
   color: white;
@@ -187,7 +192,7 @@ nav button:hover, nav button:active {
   -moz-box-shadow: 8px 8px 12px #aaa;
   -webkit-box-shadow: 8px 8px 12px #aaa;
   box-shadow: 8px 8px 12px #555;
-  margin: 10vh 6vw 5vh 6vw; }
+  margin-right: 2vw; }
 
 .row-index .div {
   display: flex;
@@ -242,11 +247,51 @@ nav button:hover, nav button:active {
 .modal {
   position: absolute; }
 
+.add {
+  position: fixed;
+  z-index: 5;
+  bottom: 2vh;
+  right: 2vw;
+  color: #3E0018;
+  background-color: white; }
+
+footer {
+  position: fixed;
+  height: 45px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center; }
+
+footer .pagination {
+  height: 87px; }
+
+footer .pagination > .active > a, footer .pagination > .active > a:focus, footer .pagination > .active > a:hover, footer .pagination > .active > span, footer .pagination > .active > span:focus, footer .pagination > .active > span:hover {
+  background-color: #88002D;
+  border-color: #885C7E; }
+
+footer .pagination > li > a, footer .pagination > .disabled > a, footer .pagination > .disabled > a:focus, footer .pagination > .disabled > a:hover, footer .pagination > .disabled > span, footer .pagination > .disabled > span:focus, footer .pagination > .disabled > span:hover {
+  color: #88002D;
+  border: 1px solid #88002D; }
+
+footer .pagination > li > a:focus, footer .pagination > li > a:hover, footer .pagination > li > span:focus, footer .pagination > li > span:hover {
+  color: #88002D;
+  background-color: #885C7E;
+  border: 1px solid #88002D; }
+
 @media all and (max-width: 991px) {
+  .row-index {
+    border: none; }
   .row-index > .div {
     justify-content: center;
     margin-bottom: 5vh; }
   .row > .suite {
+    display: none; }
+  footer {
     display: none; } }
 
 @media all and (max-width: 769px) {
@@ -268,10 +313,13 @@ nav button:hover, nav button:active {
 
 .main-produit .modal .modal-dialog .modal-body {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap; }
+  justify-content: center; }
 
-.main-produit .modal .modal-dialog .modal-body #confirmDelete, .main-produit .modal .modal-dialog .modal-body .retour {
+.main-produit .modal .modal-dialog .modal-footer {
+  display: flex;
+  justify-content: center; }
+
+.main-produit .modal .modal-dialog .modal-footer #confirmDelete, .main-produit .modal .modal-dialog .modal-footer .retour {
   background: #88002D;
   border-radius: 5px;
   color: white;
@@ -282,9 +330,9 @@ nav button:hover, nav button:active {
   -moz-box-shadow: 8px 8px 12px #aaa;
   -webkit-box-shadow: 8px 8px 12px #aaa;
   box-shadow: 8px 8px 12px #555;
-  margin: 10vh 6vw 5vh 6vw; }
+  margin-right: 2vw; }
 
-.main-produit .modal .modal-dialog .modal-body #confirmDelete:hover, .main-produit .modal .modal-dialog .modal-body .retour:hover, .main-produit .modal .modal-dialog .modal-body .retour:active, .main-produit .modal .modal-dialog .modal-body #confirmDelete:active {
+.main-produit .modal .modal-dialog .modal-footer #confirmDelete:hover, .main-produit .modal .modal-dialog .modal-footer .retour:hover, .main-produit .modal .modal-dialog .modal-footer .retour:active, .main-produit .modal .modal-dialog .modal-footer #confirmDelete:active {
   background: #3E0018;
   border-radius: 5px;
   color: white;
@@ -295,7 +343,7 @@ nav button:hover, nav button:active {
   -moz-box-shadow: 8px 8px 12px #aaa;
   -webkit-box-shadow: 8px 8px 12px #aaa;
   box-shadow: 8px 8px 12px #555;
-  margin: 10vh 6vw 5vh 6vw; }
+  margin-right: 2vw; }
 
 .main-produit .image {
   height: 70vh; }

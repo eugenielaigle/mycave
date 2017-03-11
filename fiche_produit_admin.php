@@ -9,7 +9,7 @@ $req = $bdd->prepare('SELECT id, name, year, grapes, country, region, descriptio
 	$donnees = $req->fetch();
 
 ?>
-<nav>
+<nav> <!-- navbar déconnexion -->
 	<img src="img/logo.png" alt="logo">
 	<p class="md-visible">Bonjour <?php echo $_SESSION['pseudo']; ?></p>
 			<?php 	if (isset($_GET['msg'])) {?>
@@ -32,6 +32,8 @@ $req = $bdd->prepare('SELECT id, name, year, grapes, country, region, descriptio
 							</div>
 							<div class="modal-body">
 								<p>Êtes-vous sûr(e) de vouloir supprimer <?php echo $donnees['name']; ?> de votre cave?</p>
+							</div>
+							<div class="modal-footer">
 								<a href="admin_index.php"><button class="retour">Retour</button></a>
 
 								<form action="fiche_produit_delete_post.php?id_produit=<?php echo $donnees['id']; ?>" method="post">

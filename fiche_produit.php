@@ -7,7 +7,7 @@ $req = $bdd->prepare('SELECT id, name, year, grapes, country, region, descriptio
 	$donnees = $req->fetch();
 ?>
 
-<?php include 'nav_connexion'; ?>
+<?php include 'nav_connexion.php'; ?>
 
 <main class="main main-produit">
 	<div class="container-fluid fiche">

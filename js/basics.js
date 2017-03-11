@@ -3,7 +3,7 @@ $('#myModal').on('shown.bs.modal', function() {
 });
 
 function swiperMobile() {
-	if ($(window).width() < 600) {
+	if ($(window).width() < 991) {
 
 		$('[data-container]').addClass('swiper-container');
 		$('[data-wrapper]').addClass('swiper-wrapper');

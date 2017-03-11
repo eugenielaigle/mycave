@@ -1,6 +1,7 @@
 
 <nav>
 	<img src="img/logo.png" alt="logo">
+	
 	<!-- Bouton execution modal -->
 <button class="md-visible" data-toggle="modal" data-target="#myModal">
   Se connecter

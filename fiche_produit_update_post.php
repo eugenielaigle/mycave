@@ -23,7 +23,7 @@ $req->execute(array(
 	$pdt = $_GET['id_produit'];
 	$msg = 'Référence modifiée!';
 
-	header('Location:fiche_produit_admin.php?id_produit='.$pdt.'&msg='.$msg);
+	header('Location:admin_index.php?msg='.$msg);
 
 }else{
 
@@ -67,7 +67,7 @@ $req->execute(array(
 	$pdt = $_GET['id_produit'];
 	$msg = 'Référence modifiée!';
 
-	header('Location:fiche_produit_admin.php?id_produit='.$pdt.'&msg='.$msg);
+	header('Location:admin_index.php?msg='.$msg);
 
 }
 ?>

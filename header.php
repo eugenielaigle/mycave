@@ -25,6 +25,9 @@
 	<!-- Meta media queries -->
 	<meta name="viewport" content="width=device-width" />
 
+	<!-- Favicon -->
+	<link rel="icon" href="img/logo.ico">
+
 </head>
 	<body>
 

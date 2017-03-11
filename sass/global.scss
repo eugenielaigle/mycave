@@ -11,14 +11,6 @@ body{
 
 .main{
 	margin-top: 60px;
-
-	.add{
-	position: fixed;
-	z-index: 5;
-	bottom: 2vh;
-	right: 2vw;
-	color: $dark-purple;
-	}
 }
 
 .row{
@@ -29,8 +21,20 @@ body{
 .thumbnail{
 	border: none;
 	margin: 0;
+	background-color: none;
+	-webkit-box-shadow: none;
+    box-shadow: none;
 }
 
+@media all and (max-width: 991px) {
+	body{
+		.modal-backdrop{
+		z-index: 0!important;
+		background-color: transparent!important;
+		}
+	}
+	
+}
 
 // Basics end
 
@@ -91,6 +95,7 @@ nav{
 	margin-left: auto;
     margin-right: auto;
 	color: $bordeaux;
+	top:10vh;
 	
 		.modal-body{
 		
@@ -115,8 +120,9 @@ nav{
 // Modal end
 
 // Index start
+
 .row-index{
-	padding: 25px 0;
+	padding: 20px 0;
 	border: 2px solid $bordeaux;
 	margin-top: -2px;
 
@@ -129,18 +135,21 @@ nav{
 				.modal-body{
 					    display: flex;
 					    justify-content: center;
-					    flex-wrap: wrap;
-
-					#confirmDelete, .retour{
-						@include submit ($white, $bordeaux, $light-purple);
-						margin: 10vh 6vw 5vh 6vw;;
-					}
-
-					#confirmDelete:hover, .retour:hover, .retour:active, #confirmDelete:active{
-					 	@include submit ($white, $dark-purple, $bordeaux);
-					 	margin: 10vh 6vw 5vh 6vw;;
-					}
 				}
+				.modal-footer{
+						display: flex;
+					    justify-content: center;
+
+						#confirmDelete, .retour{
+							@include submit ($white, $bordeaux, $light-purple);
+							margin-right: 2vw;
+						}
+
+						#confirmDelete:hover, .retour:hover, .retour:active, #confirmDelete:active{
+						 	@include submit ($white, $dark-purple, $bordeaux);
+						 	margin-right: 2vw;
+						}
+					}
 		}
 
 		// Modal end
@@ -193,15 +202,61 @@ nav{
 .modal{
 	position: absolute;
 }
+.add{
+	position: fixed;
+	z-index: 5;
+	bottom: 2vh;
+	right: 2vw;
+	color: $dark-purple;
+	background-color: white;
+	}
+
+footer{
+	position:fixed;
+	height: 45px;
+	bottom: 0;
+	left: 0;
+	right:0;
+	z-index: 10;
+	display: flex;
+	background-color: transparent;
+	align-items: center;
+	justify-content: center;
+
+	.pagination{
+		height: 87px;
+	}
+
+		.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{
+			background-color: $bordeaux;
+			border-color: $light-purple;
+			}
+		.pagination>li>a, .pagination>.disabled>a, .pagination>.disabled>a:focus, .pagination>.disabled>a:hover, .pagination>.disabled>span, .pagination>.disabled>span:focus, .pagination>.disabled>span:hover{
+				color: $bordeaux;
+				border: 1px solid $bordeaux;
+			}
+		.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover{
+			color: $bordeaux;
+			background-color: $light-purple;
+			border: 1px solid $bordeaux;
+		}
+}
 
 @media all and(max-width: 991px){
-
+	
+	.row-index{
+		border: none;
+	}
 	.row-index>.div{
 		justify-content: center;
 		margin-bottom: 5vh;
 	}
 
 	.row>.suite{
+		display: none;
+	}
+
+	footer{
 		display: none;
 	}
 
@@ -218,6 +273,7 @@ nav{
 	.row-index .buttons .xs-visible{
 		display: block;
 	}
+
 }
 
 // Index end
@@ -236,18 +292,22 @@ nav{
 				.modal-body{
 					    display: flex;
 					    justify-content: center;
-					    flex-wrap: wrap;
-
-					#confirmDelete, .retour{
-						@include submit ($white, $bordeaux, $light-purple);
-						margin: 10vh 6vw 5vh 6vw;;
-					}
-
-					#confirmDelete:hover, .retour:hover, .retour:active, #confirmDelete:active{
-					 	@include submit ($white, $dark-purple, $bordeaux);
-					 	margin: 10vh 6vw 5vh 6vw;;
-					}
 				}
+
+				.modal-footer{
+						display: flex;
+					    justify-content: center;
+
+						#confirmDelete, .retour{
+							@include submit ($white, $bordeaux, $light-purple);
+							margin-right: 2vw;
+						}
+
+						#confirmDelete:hover, .retour:hover, .retour:active, #confirmDelete:active{
+						 	@include submit ($white, $dark-purple, $bordeaux);
+						 	margin-right: 2vw;
+						}
+					}
 		}
 
 		// Modal end
