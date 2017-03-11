@@ -519,11 +519,18 @@ footer{
 }
 
 @media all and (max-width: 480px){
+	
 	input[type=file]{
 		width: 100%;
 	}
 	input[type=file]:hover{
 		width: 100%;
 	}
-	
+
 }
+@media all and (max-width: 320px){
+	.main-produit .margin-top{
+		margin-top: 15vh;
+	}
+}
+//fiche produit update end

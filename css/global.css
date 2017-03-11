@@ -587,3 +587,7 @@ footer .pagination > li > a:focus, footer .pagination > li > a:hover, footer .pa
     width: 100%; }
   input[type=file]:hover {
     width: 100%; } }
+
+@media all and (max-width: 320px) {
+  .main-produit .margin-top {
+    margin-top: 15vh; } }
