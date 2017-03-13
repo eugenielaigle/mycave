@@ -372,7 +372,7 @@ footer{
 		margin-top: 80px;
 
 		.image{
-			height: 45vh;
+			height: 45%;
 
 			img{
 				width: 45%;
@@ -386,9 +386,9 @@ footer{
 	.main-produit{
 		margin-top: 70px;
 
-		.image{
-			height: 45vh;
-		}
+		// .image{
+		// 	height: 45vh;
+		// }
 	}
 }
 
@@ -397,12 +397,12 @@ footer{
 	.main-produit{
 		margin-top: 70px;
 
-		.image{
-			height: 45vh;
+		// .image{
+		// 	height: 45vh;
 
 			img{
 				width: 45%;
-			}
+			// }
 		}
 		.md-visible{
 			display: none;
@@ -431,13 +431,13 @@ footer{
 	.main-produit{
 		margin-top: 70px;
 
-		.image{
-			height: 40vh;
+		// .image{
+		// 	height: 40vh;
 
 			img{
 				width: 55%;
 			}
-		}
+		// }
 	}
 }
 
@@ -480,12 +480,12 @@ footer{
 		flex-direction: column;
 
 		textarea{
-			margin-bottom: 2vh;
+			margin-bottom: 12vh;
 		}
 	}
 
 	.margin-top{
-		margin-top: 6vh;
+		margin-top: 10vh;
 	}
 	
 	.submit{
@@ -526,11 +526,8 @@ footer{
 	input[type=file]:hover{
 		width: 100%;
 	}
-
-}
-@media all and (max-width: 320px){
 	.main-produit .margin-top{
-		margin-top: 15vh;
+		margin-top: 0vh;
 	}
 }
 //fiche produit update end

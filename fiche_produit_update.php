@@ -2,6 +2,9 @@
 session_start();
 include 'header.php';
 
+if(isset($_SESSION['pseudo']) AND isset($_SESSION['id'])){
+
+
 // REQUETE SQL
 $req = $bdd->prepare('SELECT name, year, grapes, country, region, description, picture FROM mycave WHERE id = ?');
 $req->execute(array($_GET['id_produit']));
@@ -57,3 +60,5 @@ $donnees = $req->fetch();
 		</div> <!-- end row -->
 	</div> <!-- end container -->
 </main>
+
+<?php }else header('location:index.php')?>

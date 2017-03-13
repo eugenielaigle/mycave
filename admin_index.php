@@ -1,11 +1,10 @@
 <?php 
 	session_start();
-
+		
  
 include 'header.php'; 
 
-
-
+if(isset($_SESSION['pseudo']) AND isset($_SESSION['id'])){
 ?>
 
 <nav>
@@ -112,7 +111,7 @@ include 'header.php';
 			<?php if ($current_page == 1): ?> <!-- ETAPE 5/6: CHEVRON DE GAUCHE-->
 				<li class="disabled"><a href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a></li>
 			<?php else: ?>
-				<li class="waves-effect"><a href="index.php?page=<?php echo $current_page-1 ?>"><i class="fa fa-chevron-left" aria-hidden="true"></i></a></li>
+				<li class="waves-effect"><a href="admin_index.php?page=<?php echo $current_page-1 ?>"><i class="fa fa-chevron-left" aria-hidden="true"></i></a></li>
 			<?php endif ?>
 
 			
@@ -121,7 +120,7 @@ include 'header.php';
 				<?php if ($i == $current_page): ?> <!-- ETAPE 4/6: Li active et Li autres -->
 					<li class="active"><a href="#"><?php echo $i; ?></a></li>
 				<?php else: ?>
-					<li class="waves-effect"><a href="index.php?page=<?php echo $i; ?>"><?php echo $i; ?></a></li> <!-- ETAPE 2/6: href de Li et numéro de Li -->
+					<li class="waves-effect"><a href="admin_index.php?page=<?php echo $i; ?>"><?php echo $i; ?></a></li> <!-- ETAPE 2/6: href de Li et numéro de Li -->
 				<?php endif ?>	
 
 			<?php } ?>
@@ -129,7 +128,7 @@ include 'header.php';
 			<?php if ($current_page == $nb_pages): ?> <!-- ETAPE 6/6: Chevron de droite -->
 				<li class="disabled"><a href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
 			<?php else: ?>
-				<li class="waves-effect"><a href="index.php?page=<?php echo $current_page+1; ?>"><i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+				<li class="waves-effect"><a href="admin_index.php?page=<?php echo $current_page+1; ?>"><i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
 			<?php endif ?>
 				
 	    </ul>
@@ -139,4 +138,7 @@ include 'header.php';
 </footer>
 
 
-<?php include 'footer.php'; ?>
+<?php include 'footer.php' ?>
+
+<?php }
+else header('location:index.php')?>

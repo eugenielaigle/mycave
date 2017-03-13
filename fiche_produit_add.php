@@ -2,7 +2,9 @@
 
 session_start();
 
-include 'header.php'; ?>
+include 'header.php';
+if(isset($_SESSION['pseudo']) AND isset($_SESSION['id'])){
+?>
 
 <nav>
 	<img src="img/logo.png" alt="logo">
@@ -19,7 +21,7 @@ include 'header.php'; ?>
 	<div class="container-fluid fiche">
 		<div class="row row-produit">
 	
-			<form action="fiche_produit_add_post.php ?>" method="post" enctype="multipart/form-data">
+			<form action="fiche_produit_add_post.php" method="post" enctype="multipart/form-data">
 				<div class="col-md-12 col-xs-12">
 					<input type="file" name="picture">
 				</div>
@@ -54,3 +56,5 @@ include 'header.php'; ?>
 </main>
 
 <?php include 'footer.php'; ?>
+<?php }
+else header('location:index.php')?>

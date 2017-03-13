@@ -1,5 +1,9 @@
 <?php include 'header.php';
 
+ session_start();
+ session_destroy();
+
+
 $req = $bdd->prepare('SELECT id, name, year, grapes, country, region, description, picture FROM mycave WHERE id= ?');
 
 	$req->execute(array($_GET['id_produit']));

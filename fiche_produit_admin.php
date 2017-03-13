@@ -1,6 +1,10 @@
-<?php session_start();
+<?php
+
+	session_start();
 
  include 'header.php';
+
+ if(isset($_SESSION['pseudo']) AND isset($_SESSION['id'])){
 
 $req = $bdd->prepare('SELECT id, name, year, grapes, country, region, description, picture FROM mycave WHERE id= ?');
 
@@ -73,4 +77,7 @@ $req = $bdd->prepare('SELECT id, name, year, grapes, country, region, descriptio
 	</div> <!-- end container -->
 </main>
 
-<?php include 'footer.php'; ?>
+<?php include 'footer.php'; 
+
+} else header('location:index.php')?>
+?>

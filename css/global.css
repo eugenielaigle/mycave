@@ -412,22 +412,18 @@ footer .pagination > li > a:focus, footer .pagination > li > a:hover, footer .pa
   .main-produit {
     margin-top: 80px; }
   .main-produit .image {
-    height: 45vh; }
+    height: 45%; }
   .main-produit .image img {
     width: 45%; } }
 
 @media all and (max-width: 768px) {
   .main-produit {
-    margin-top: 70px; }
-  .main-produit .image {
-    height: 45vh; } }
+    margin-top: 70px; } }
 
 @media all and (max-width: 570px) {
   .main-produit {
     margin-top: 70px; }
-  .main-produit .image {
-    height: 45vh; }
-  .main-produit .image img {
+  .main-produit img {
     width: 45%; }
   .main-produit .md-visible {
     display: none; }
@@ -463,9 +459,7 @@ footer .pagination > li > a:focus, footer .pagination > li > a:hover, footer .pa
 @media all and (max-width: 370px) {
   .main-produit {
     margin-top: 70px; }
-  .main-produit .image {
-    height: 40vh; }
-  .main-produit .image img {
+  .main-produit img {
     width: 55%; } }
 
 .main-produit form {
@@ -517,10 +511,10 @@ footer .pagination > li > a:focus, footer .pagination > li > a:hover, footer .pa
   flex-direction: column; }
 
 .main-produit .cells textarea {
-  margin-bottom: 2vh; }
+  margin-bottom: 12vh; }
 
 .main-produit .margin-top {
-  margin-top: 6vh; }
+  margin-top: 10vh; }
 
 .main-produit .submit {
   display: flex;
@@ -586,8 +580,6 @@ footer .pagination > li > a:focus, footer .pagination > li > a:hover, footer .pa
   input[type=file] {
     width: 100%; }
   input[type=file]:hover {
-    width: 100%; } }
-
-@media all and (max-width: 320px) {
+    width: 100%; }
   .main-produit .margin-top {
-    margin-top: 15vh; } }
+    margin-top: 0vh; } }

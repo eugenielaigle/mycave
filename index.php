@@ -1,5 +1,8 @@
-<?php include 'header.php'; ?>
+<?php include 'header.php'; 
 
+ session_start();
+ session_destroy();
+ ?>
 <?php include 'nav_connexion.php'; ?> <!-- navbar -->
 
 <main class="main">
