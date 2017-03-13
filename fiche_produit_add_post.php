@@ -24,9 +24,14 @@ $extensions_valides = array( 'jpg' , 'jpeg' , 'gif' , 'png' );
 $extension_upload = strtolower(  substr(  strrchr($_FILES['picture']['name'], '.')  ,1)  );
 if ( in_array($extension_upload,$extensions_valides) ) echo "Extension correcte";
 
-$nom = "img/{$_GET['id_produit']}.{$extension_upload}";
-$nombdd = $_GET['id_produit'].'.'.$extension_upload;
-$resultat = move_uploaded_file($_FILES['picture']['tmp_name'],$nom);
+$folder = "img/";
+$nom = uniquid().'.'.$extension_upload;
+$path = $folder.$nom;
+
+
+/*$nom = "img/".uniquid().$extension_upload;
+$nombdd = uniquid().'.'.$extension_upload;*/
+$resultat = move_uploaded_file($_FILES['picture']['tmp_name'],$path);
 if ($resultat) echo "Transfert réussi";
 
 // requete sql (insert into)
@@ -40,7 +45,7 @@ $req->execute(array(
 		'country'=>$_POST['country'],
 		'region'=>$_POST['region'],
 		'description'=>$_POST['description'],
-		'picture'=>$nombdd
+		'picture'=>$path
 	));
 
 // redirection admin.php
