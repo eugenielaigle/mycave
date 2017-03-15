@@ -34,7 +34,7 @@
 
 					<div data-slide="swiper-slide" class="swiper-slide">
 						<div class="row row-index">
-							<div class="col-md-1 col-xs-12 image thumbnail div margin-top">
+							<div class="col-md-2 col-xs-12 image thumbnail div margin-top">
 								<?php if ($donnees['picture'] === '.'){
 									$donnees['picture'] = 'generic.jpg';
 								} ?> 
@@ -49,7 +49,7 @@
 									<!-- <h3 class="xs-visible">Description : </br>"<?php echo $donnees['description'] ?>"</h3> -->
 								</div>
 							</div>
-							<div class="col-md-6 div suite md-visible">
+							<div class="col-md-5 div suite md-visible">
 									<p>Description: </br>"<?php echo $donnees['description'] ?>"</p>
 							</div>
 							<div class="col-md-2 col-xs-12 div buttons">

@@ -66,7 +66,7 @@ if(isset($_SESSION['pseudo']) AND isset($_SESSION['id'])){
 										</div><!-- /.modal -->
 							
 							
-							<div class="col-md-1 col-xs-12 image thumbnail div margin-top"> 
+							<div class="col-md-2 col-xs-12 image thumbnail div margin-top"> 
 								<img src="img/<?php echo $donnees['picture']; ?>" alt="image">
 							</div>
 							<div class="col-md-3 col-xs-12 div presentation">
@@ -77,7 +77,7 @@ if(isset($_SESSION['pseudo']) AND isset($_SESSION['id'])){
 									<h3>Provenance : <?php echo $donnees['region'] . ', ' . $donnees['country']; ?></h3>
 								</div>
 							</div>
-							<div class="col-md-6 col-xs-12 div suite">
+							<div class="col-md-5 col-xs-12 div suite">
 									<p>Description : <?php echo $donnees['description'] ?></p>
 							</div>
 							<div class="col-md-2 col-xs-12 div buttons">
