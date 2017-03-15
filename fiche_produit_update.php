@@ -41,14 +41,18 @@ $donnees = $req->fetch();
 				</div>
 				<div class="col-md-4 col-xs-9 cells margin-top">
 					<input type="text" name="name" value=<?php echo $donnees['name']; ?>>
-					<select name="year" id="year">
-							<?php  
-								for ($i = 1900; $i < date("Y")+1; $i++) {
+					<select name="year" id="year"> 
+						<option><?php echo $donnees['year']; ?></option>
+						<?php  
+						for ($i = 1900; $i < $donnees['year'] ; $i++) {
+									echo '<option value="'.$i.'">'.$i.'</option>';
+								}
+								for ($i = $donnees['year']; $i < date("Y")+1 ; $i++) {
 									echo '<option value="'.$i.'">'.$i.'</option>';
 								};
 							?>
 						</select>
-					<input type="text" name="grapes" value="<?php echo $donnees['grapes']; ?>">
+					<input type="text" name="grapes" value=<?php echo $donnees['grapes']; ?>>
 					<input type="text" name="country" value=<?php echo $donnees['country']; ?>>
 					<input type="text" name="region" value=<?php echo $donnees['region']; ?>>
 					<textarea name="description" cols="30" rows="10"><?php echo $donnees['description'] ?></textarea>
