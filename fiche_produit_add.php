@@ -26,11 +26,11 @@ if(isset($_SESSION['pseudo']) AND isset($_SESSION['id'])){
 					<input type="file" name="picture">
 				</div>
 					<div class="col-md-2 col-md-offset-1 col-xs-3 product-datas margin-top">
-						<h3>Name : </h3>
-						<h3>Année : </h3>
-						<h3>Cépage : </h3>
-						<h3>Pays : </h3>
-						<h3>Région : </h3>
+						<h3>Name: </h3>
+						<h3>Année: </h3>
+						<h3>Cépage: </h3>
+						<h3>Pays: </h3>
+						<h3>Région: </h3>
 						<h3>Description:</h3>
 					</div>
 					<div class="col-md-8 col-xs-9 cells margin-top">

@@ -32,11 +32,11 @@ $donnees = $req->fetch();
 						<input type="file" name="picture">
 				</div>
 				<div class="col-md-2 col-xs-3 product-datas margin-top">
-					<h3>Name : </h3>
-					<h3>Année : </h3>
-					<h3>Cépage : </h3>
-					<h3>Pays : </h3>
-					<h3>Région : </h3>
+					<h3>Name: </h3>
+					<h3>Année: </h3>
+					<h3>Cépage: </h3>
+					<h3>Pays: </h3>
+					<h3>Région: </h3>
 					<h3>Description: </h3>
 				</div>
 				<div class="col-md-4 col-xs-9 cells margin-top">
