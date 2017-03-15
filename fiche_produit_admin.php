@@ -80,4 +80,3 @@ $req = $bdd->prepare('SELECT id, name, year, grapes, country, region, descriptio
 <?php include 'footer.php'; 
 
 } else header('location:index.php')?>
-?>

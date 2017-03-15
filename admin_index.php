@@ -67,21 +67,18 @@ if(isset($_SESSION['pseudo']) AND isset($_SESSION['id'])){
 							
 							
 							<div class="col-md-1 col-xs-12 image thumbnail div margin-top"> 
-								<?php if ($donnees['picture'] === '.'){
-									$donnees['picture'] = 'generic.jpg';
-								} ?>
 								<img src="img/<?php echo $donnees['picture']; ?>" alt="image">
 							</div>
 							<div class="col-md-3 col-xs-12 div presentation">
 								<div class="text">
 									<h2><?php echo $donnees['name']; ?></h2>
-									<h3>Année:<?php echo $donnees['year']; ?></h3>
-									<h3>Cépage:<?php echo $donnees['grapes']; ?></h3>
-									<h3>Provenance:<?php echo $donnees['region'] . ', ' . $donnees['country']; ?></h3>
+									<h3>Année : <?php echo $donnees['year']; ?></h3>
+									<h3>Cépage : <?php echo $donnees['grapes']; ?></h3>
+									<h3>Provenance : <?php echo $donnees['region'] . ', ' . $donnees['country']; ?></h3>
 								</div>
 							</div>
 							<div class="col-md-6 col-xs-12 div suite">
-									<p>Description: <?php echo $donnees['description'] ?></p>
+									<p>Description : <?php echo $donnees['description'] ?></p>
 							</div>
 							<div class="col-md-2 col-xs-12 div buttons">
 								<a href="fiche_produit_admin.php?id_produit=<?php echo $donnees['id']; ?>"><button><i class="fa fa-search" aria-hidden="true"></i></button></a>

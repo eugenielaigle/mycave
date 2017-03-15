@@ -11,7 +11,7 @@ if(isset($_SESSION['pseudo']) AND isset($_SESSION['id'])){
 	<p class="md-visible">Ajouter une référence</p>
 			<?php 	if (isset($_GET['msg'])) {?>
 				<p><?php  echo $_GET['msg'];?></p>
-			<?php } ?>
+			<?php } ?>	
 	<a class="md-visible" href="index.php"><button>Se Déconnecter</button></a>
 	<a class="xs-visible" href="index.php"><button><i class="fa fa-sign-out" aria-hidden="true"></i></button></a>
 </nav>
@@ -26,17 +26,23 @@ if(isset($_SESSION['pseudo']) AND isset($_SESSION['id'])){
 					<input type="file" name="picture">
 				</div>
 					<div class="col-md-2 col-md-offset-1 col-xs-3 product-datas margin-top">
-						<h3>Name:</h3>
-						<h3>Année:</h3>
-						<h3>Cépage:</h3>
-						<h3>Pays:</h3>
-						<h3>Région:</h3>
+						<h3>Name : </h3>
+						<h3>Année : </h3>
+						<h3>Cépage : </h3>
+						<h3>Pays : </h3>
+						<h3>Région : </h3>
 						<h3>Description:</h3>
 					</div>
 					<div class="col-md-8 col-xs-9 cells margin-top">
 
 						<input type="text" name="name">
-						<input type="year" name="year">
+						<select name="year" id="year">
+							<?php  
+								for ($i = 1900; $i < date("Y")+1; $i++) {
+									echo '<option value="'.$i.'">'.$i.'</option>';
+								};
+							?>
+						</select>
 						<input type="text" name="grapes">
 						<input type="text" name="country">
 						<input type="text" name="region"> 

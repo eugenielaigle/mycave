@@ -9,6 +9,11 @@ body{
 	font-size: $font-size;
 }
 
+h2{
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
 .main{
 	margin-top: 60px;
 }
@@ -366,7 +371,7 @@ footer{
 	}
 }
 
-@media all and(max-width: 991px){
+@media all and(max-width: 1009px){
 
 	.main-produit{
 		margin-top: 80px;
@@ -381,14 +386,20 @@ footer{
 	}
 }
 
+@media all and(max-width: 992px){
+	.main-produit .image{
+			height: 50%;
+		}
+}
+
 @media all and(max-width: 768px){
 
 	.main-produit{
 		margin-top: 70px;
 
-		// .image{
-		// 	height: 45vh;
-		// }
+		.image{
+			height: 55%;
+		}
 	}
 }
 
@@ -397,12 +408,12 @@ footer{
 	.main-produit{
 		margin-top: 70px;
 
-		// .image{
-		// 	height: 45vh;
+		.image{
+			height: 32%;
 
 			img{
 				width: 45%;
-			// }
+			}
 		}
 		.md-visible{
 			display: none;
@@ -431,13 +442,9 @@ footer{
 	.main-produit{
 		margin-top: 70px;
 
-		// .image{
-		// 	height: 40vh;
-
 			img{
 				width: 55%;
 			}
-		// }
 	}
 }
 
@@ -495,39 +502,34 @@ footer{
 		input{
 			@include submit ($white, $dark-purple, $bordeaux);
 				padding: 10px 25px;
-				margin: 2vh 2vw 0 0;
+				margin: 2vh 2vw 2vh 0;
 		}
 
 		input:hover, input:active{
 			@include submit ($white, $bordeaux, $light-purple);
 			    padding: 10px 25px;
-			    margin: 2vh 2vw 0 0;
+			    margin: 2vh 2vw 2vh 0;
 		}
 
 		button{
 				@include submit ($white, $dark-purple, $bordeaux);
 				padding: 10px 25px;
-				margin: 2vh 2vw 0 0;
+				margin: 2vh 2vw 2vh 0;
 		}
 
 		button:hover, button:active{
 			@include submit ($white, $bordeaux, $light-purple);
 			    padding: 10px 25px;
-			    margin: 2vh 2vw 0 0;
+			    margin: 2vh 2vw 2vh 0;
 	}
 }
 }
 
-@media all and (max-width: 480px){
-	
-	input[type=file]{
-		width: 100%;
-	}
-	input[type=file]:hover{
-		width: 100%;
-	}
-	.main-produit .margin-top{
+@media all and (max-width: 768px) and (min-width: 481px){
+		.main-produit .margin-top{
 		margin-top: 0vh;
 	}
 }
+
+
 //fiche produit update end

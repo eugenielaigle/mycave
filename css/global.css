@@ -39,6 +39,10 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1em; }
 
+h2 {
+  text-transform: uppercase;
+  font-weight: bold; }
+
 .main {
   margin-top: 60px; }
 
@@ -408,7 +412,7 @@ footer .pagination > li > a:focus, footer .pagination > li > a:hover, footer .pa
 .main-produit .xs-visible {
   display: none; }
 
-@media all and (max-width: 991px) {
+@media all and (max-width: 1009px) {
   .main-produit {
     margin-top: 80px; }
   .main-produit .image {
@@ -416,14 +420,22 @@ footer .pagination > li > a:focus, footer .pagination > li > a:hover, footer .pa
   .main-produit .image img {
     width: 45%; } }
 
+@media all and (max-width: 992px) {
+  .main-produit .image {
+    height: 50%; } }
+
 @media all and (max-width: 768px) {
   .main-produit {
-    margin-top: 70px; } }
+    margin-top: 70px; }
+  .main-produit .image {
+    height: 55%; } }
 
 @media all and (max-width: 570px) {
   .main-produit {
     margin-top: 70px; }
-  .main-produit img {
+  .main-produit .image {
+    height: 32%; }
+  .main-produit .image img {
     width: 45%; }
   .main-produit .md-visible {
     display: none; }
@@ -532,7 +544,7 @@ footer .pagination > li > a:focus, footer .pagination > li > a:hover, footer .pa
   -webkit-box-shadow: 8px 8px 12px #aaa;
   box-shadow: 8px 8px 12px #555;
   padding: 10px 25px;
-  margin: 2vh 2vw 0 0; }
+  margin: 2vh 2vw 2vh 0; }
 
 .main-produit .submit input:hover, .main-produit .submit input:active {
   background: #88002D;
@@ -546,7 +558,7 @@ footer .pagination > li > a:focus, footer .pagination > li > a:hover, footer .pa
   -webkit-box-shadow: 8px 8px 12px #aaa;
   box-shadow: 8px 8px 12px #555;
   padding: 10px 25px;
-  margin: 2vh 2vw 0 0; }
+  margin: 2vh 2vw 2vh 0; }
 
 .main-produit .submit button {
   background: #3E0018;
@@ -560,7 +572,7 @@ footer .pagination > li > a:focus, footer .pagination > li > a:hover, footer .pa
   -webkit-box-shadow: 8px 8px 12px #aaa;
   box-shadow: 8px 8px 12px #555;
   padding: 10px 25px;
-  margin: 2vh 2vw 0 0; }
+  margin: 2vh 2vw 2vh 0; }
 
 .main-produit .submit button:hover, .main-produit .submit button:active {
   background: #88002D;
@@ -574,12 +586,8 @@ footer .pagination > li > a:focus, footer .pagination > li > a:hover, footer .pa
   -webkit-box-shadow: 8px 8px 12px #aaa;
   box-shadow: 8px 8px 12px #555;
   padding: 10px 25px;
-  margin: 2vh 2vw 0 0; }
+  margin: 2vh 2vw 2vh 0; }
 
-@media all and (max-width: 480px) {
-  input[type=file] {
-    width: 100%; }
-  input[type=file]:hover {
-    width: 100%; }
+@media all and (max-width: 768px) and (min-width: 481px) {
   .main-produit .margin-top {
     margin-top: 0vh; } }

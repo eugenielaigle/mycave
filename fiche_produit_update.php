@@ -27,22 +27,27 @@ $donnees = $req->fetch();
 	<div class="container-fluid fiche">
 		<div class="row row-produit">
 			<form action="fiche_produit_update_post.php?id_produit=<?php echo $_GET['id_produit']; ?>" method="post" enctype="multipart/form-data">
-			<!-- <div class="image" style="background-image: url('img/<?php echo $donnees['picture']; ?>'); width: 400px; height: 500px; background-size: cover;"></div> -->
 				<div class="col-md-5 col-xs-12 image thumbnail update-pdt"> 
 					<img src="img/<?php echo $donnees['picture']; ?>" alt="image-produit">
 						<input type="file" name="picture">
 				</div>
 				<div class="col-md-2 col-xs-3 product-datas margin-top">
-					<h3>Name:</h3>
-					<h3>Année:</h3>
-					<h3>Cépage:</h3>
-					<h3>Pays:</h3>
-					<h3>Région:</h3>
-					<h3>Description:</h3>
+					<h3>Name : </h3>
+					<h3>Année : </h3>
+					<h3>Cépage : </h3>
+					<h3>Pays : </h3>
+					<h3>Région : </h3>
+					<h3>Description: </h3>
 				</div>
 				<div class="col-md-4 col-xs-9 cells margin-top">
 					<input type="text" name="name" value=<?php echo $donnees['name']; ?>>
-					<input type="year" name="year" value=<?php echo $donnees['year']; ?>>
+					<select name="year" id="year">
+							<?php  
+								for ($i = 1900; $i < date("Y")+1; $i++) {
+									echo '<option value="'.$i.'">'.$i.'</option>';
+								};
+							?>
+						</select>
 					<input type="text" name="grapes" value="<?php echo $donnees['grapes']; ?>">
 					<input type="text" name="country" value=<?php echo $donnees['country']; ?>>
 					<input type="text" name="region" value=<?php echo $donnees['region']; ?>>

@@ -7,35 +7,31 @@ session_start();
 include 'connect.php';
 
 // récolte de données
-
 $_FILES['picture']['name'];     //Le nom original du fichier, comme sur le disque du visiteur (exemple : mon_picture.png).
 $_FILES['picture']['type'];     //Le type du fichier. Par exemple, cela peut être « image/png ».
 $_FILES['picture']['size'];     //La taille du fichier en octets.
 $_FILES['picture']['tmp_name']; //L'adresse vers le fichier uploadé dans le répertoire temporaire.
 $_FILES['picture']['error'];    //Le code d'erreur, qui permet de savoir si le fichier a bien été uploadé.
 
-if ($_FILES['picture']['error'] > 0) $erreur = "Erreur lors du transfert";
-if ($_FILES['picture']['size'] > $maxsize) $erreur = "Le fichier est trop gros";
+$extensions = array('.png', '.gif', '.jpg', '.jpeg');
+$extension = strrchr($_FILES['picture']['name'], '.'); 
 
-$extensions_valides = array( 'jpg' , 'jpeg' , 'gif' , 'png' );
-//1. strrchr renvoie l'extension avec le point (« . »).
-//2. substr(chaine,1) ignore le premier caractère de chaine.
-//3. strtolower met l'extension en minuscules.
-$extension_upload = strtolower(  substr(  strrchr($_FILES['picture']['name'], '.')  ,1)  );
-if ( in_array($extension_upload,$extensions_valides) ) echo "Extension correcte";
+if (($_FILES['picture']['size'] > 0) && ($_FILES['picture']['size'] < 1000000) && (in_array($extension, $extensions))) {
 
-$folder = "img/";
-$nom = uniquid().'.'.$extension_upload;
-$path = $folder.$nom;
+$nom = uniqid().'.'.$_FILES['picture']['name'];
 
 
-/*$nom = "img/".uniquid().$extension_upload;
-$nombdd = uniquid().'.'.$extension_upload;*/
-$resultat = move_uploaded_file($_FILES['picture']['tmp_name'],$path);
+     $nom = strtr($nom, 
+          'ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ', 
+          'AAAAAACEEEEIIIIOOOOOUUUUYaaaaaaceeeeiiiioooooouuuuyy');
+     $nom = preg_replace('/([^.a-z0-9]+)/i', '-', $nom);
+$resultat = move_uploaded_file($_FILES['picture']['tmp_name'],'img/'.$nom);
 if ($resultat) echo "Transfert réussi";
 
+}else{
+	$nom = 'generic.jpg';
+}
 // requete sql (insert into)
-
 $req = $bdd->prepare('INSERT INTO mycave (name, year, grapes, country, region, description, picture) VALUES (:name, :year, :grapes, :country, :region, :description, :picture)');
 
 $req->execute(array(
@@ -45,7 +41,7 @@ $req->execute(array(
 		'country'=>$_POST['country'],
 		'region'=>$_POST['region'],
 		'description'=>$_POST['description'],
-		'picture'=>$path
+		'picture'=>$nom
 	));
 
 // redirection admin.php

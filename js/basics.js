@@ -43,4 +43,6 @@ $('.suppr').click(function() {
 	});
 });
 
-
+$("#datepicker").datepicker({
+    dateFormat:'yyyy'
+});
